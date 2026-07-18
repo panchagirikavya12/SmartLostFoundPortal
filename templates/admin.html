@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Admin Dashboard</h1>
+
+<h2>Lost Items</h2>
+
+<table border="1" cellpadding="10">
+
+<tr>
+<th>Item Name</th>
+<th>Category</th>
+<th>Location</th>
+<th>Date</th>
+</tr>
+
+{% for item in lost_items %}
+
+<tr>
+<td>{{ item[0] }}</td>
+<td>{{ item[1] }}</td>
+<td>{{ item[2] }}</td>
+<td>{{ item[3] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br><br>
+
+<h2>Found Items</h2>
+
+<table border="1" cellpadding="10">
+
+<tr>
+<th>Item Name</th>
+<th>Category</th>
+<th>Location</th>
+<th>Date</th>
+</tr>
+
+{% for item in found_items %}
+
+<tr>
+<td>{{ item[0] }}</td>
+<td>{{ item[1] }}</td>
+<td>{{ item[2] }}</td>
+<td>{{ item[3] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<button onclick="window.location.href='/'">
+Home
+</button>
+
+</div>
+
+</body>
+</html>

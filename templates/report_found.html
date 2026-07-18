@@ -1,0 +1,34 @@
+<!DOCTYPE html>  <html>  
+<head>  
+    <title>Report Found Item</title>  
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+</head>  <body>  <div class="container">  <h1>Report Found Item</h1>  <p>Fill in the details below to report a found item.</p>  <hr>  <form method="POST">  <label>Item Name</label>
+<input type="text" name="item_name" placeholder="Enter item name" required>
+
+<label>Category</label>
+<select name="category" required>
+
+<option value="">Select Category</option>  
+<option>Mobile Phone</option>  
+<option>Laptop</option>  
+<option>Wallet</option>  
+<option>ID Card</option>  
+<option>Bag</option>  
+<option>Watch</option>  
+<option>Book</option>  
+<option>Keys</option>  
+<option>Earphones</option>  
+<option>Water Bottle</option>  
+<option>Other</option>  
+</select>  <label>Location Found</label>
+<input type="text" name="location" placeholder="Where was it found?" required>
+
+<label>Date Found</label>
+<input type="date" name="date" required>
+
+<label>Description</label>
+
+<textarea name="description" rows="5" placeholder="Describe the item." required></textarea>  <input type="submit" value="Submit Found Item">  </form>  <br>  <a href="/">Back to Home</a>
+
+</div>  </body>  
+</html>
